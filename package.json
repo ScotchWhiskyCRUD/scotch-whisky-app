@@ -4,20 +4,19 @@
   "description": "Scotch Whisky App",
   "main": "src/server.js",
   "scripts": {
+    "dev": "nodemon src/server.js -e js,jsx,html,css,json",
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ScotchWhiskyCRUD/scotch-whisky-app.git"
-  },
-  "keywords": [
-    "scotch",
-    "whisky"
-  ],
   "author": "Emil Mebasser, Brett Guidry, Crystal Agoncillo, Jason Clark",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ScotchWhiskyCRUD/scotch-whisky-app/issues"
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   },
-  "homepage": "https://github.com/ScotchWhiskyCRUD/scotch-whisky-app#readme"
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0",
+    "validator": "^13.7.0"
+  }
 }
