@@ -2,7 +2,7 @@
   "name": "scratch-project",
   "version": "1.0.0",
   "description": "Scotch Whisky App",
-  "main": "src/app.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
