@@ -1,0 +1,23 @@
+{
+  "name": "scratch-project",
+  "version": "1.0.0",
+  "description": "Scotch Whisky App",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScotchWhiskyCRUD/scotch-whisky-app.git"
+  },
+  "keywords": [
+    "scotch",
+    "whisky"
+  ],
+  "author": "Emil Mebasser, Brett Guidry, Crystal Agoncillo, Jason Clark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScotchWhiskyCRUD/scotch-whisky-app/issues"
+  },
+  "homepage": "https://github.com/ScotchWhiskyCRUD/scotch-whisky-app#readme"
+}
