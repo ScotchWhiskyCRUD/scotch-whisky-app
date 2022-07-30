@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const validator = require('validator');
 
+
 const UserSchema = new Schema({
     userName: {
         type: String,
@@ -18,7 +19,12 @@ const UserSchema = new Schema({
             throw new Error(`Cannot use the word 'password' within your password.`);
           }
         }
-    }
+    },
+    likes: [{
+        whisky: {
+            name: { type: String } 
+        }
+    }]
 });
 
 module.exports = mongoose.model('User', UserSchema);

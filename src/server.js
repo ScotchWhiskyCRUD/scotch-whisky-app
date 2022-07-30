@@ -14,9 +14,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// serve static assets
+app.use('/client', express.static(path.join(__dirname, '..', 'client')));
 
 app.use(userRouter);
+
+
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port);
