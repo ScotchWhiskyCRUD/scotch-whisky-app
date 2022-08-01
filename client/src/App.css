@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@1&display=swap');
+
+html {
+    height: 100vh;
+}
+
+body {
+    text-align: center;
+    background: url('../public/assets/wood.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.glass {
+    background: rgba(255,255,255,0.25);
+    width: 60vw;
+    height: 90vh;
+    margin: 5vh auto;
+    overflow-y: auto;
+}
+
+.glass::-webkit-scrollbar {
+    display: none;
+    /* scrollbar-width: 6px; */
+  }
+
+h1, h2 {
+    font-family: 'IM Fell English SC', serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'IM Fell English SC', serif;
+}
+
+h4, h5, h6, p, a {
+    font-family: 'IM Fell English', serif;
+}
+
+a {
+    color: #000;
+    font-weight: 600;
+}
+
+hr {
+    max-width: 500px;
+    height: 2px;
+    background-color: #000;
+    border: none;
+}
+
+p hr {
+    max-width: 350px;
+    margin: 2em auto;
+}
+
+img {
+    width: 300px;
+}
+
+input, button {
+    padding: 0.3rem 0.6rem;
+    width: 300px;
+    font-family: 'IM Fell English SC', serif;
+    font-weight: 600;
+    border: 1px solid #000;
+    font-size: 1em;
+}
+
+input {
+    background: beige;
+}
+
+button {
+    background: #C5A289;
+}
+
+
+::placeholder {
+    font-weight: 400;
+    color: #926F56;
+}
+
+::selection {
+    background: #5D2E0D;
+    color: #2F1707;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .glass {
+        width: 90vw;
+    }
+
+    p hr {
+        width: 80%;
+    }
+}

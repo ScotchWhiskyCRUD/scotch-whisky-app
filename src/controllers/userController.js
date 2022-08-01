@@ -3,6 +3,7 @@ const User = require('../models/userModel');
 const userController = {};
 
 userController.createUser = async (req, res, next) => {
+  console.log('incoming user registration request');
   console.log(req.body);
   try {
     const newUser = await User.create(req.body);
