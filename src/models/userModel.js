@@ -32,3 +32,4 @@ module.exports = mongoose.model('User', UserSchema);
 // NOTE: the two lines below are the same as line two lines above
 // const User = mongoose.model('User', userSchema);
 // module.exports = User;
+

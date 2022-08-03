@@ -38,6 +38,8 @@ const App = () => {
           </Route>
           <Route path="/dashboard" element={<WhiskyContainer/>}>
           </Route>
+          {/* <Route path="/tastinglist" element={<TastingList/>}>
+          </Route> */}
           <Route path="/settings" element={<Settings/>}>
           </Route>
           <Route path="*" element={<ErrorPage/>}>
