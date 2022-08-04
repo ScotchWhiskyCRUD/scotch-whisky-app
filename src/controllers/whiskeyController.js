@@ -55,7 +55,7 @@ whiskeyController.getWhiskeys = (req, res, next) => {
     
     const addWhiskeys = await db.query(addQuery, values)
     res.locals.addWhiskey = addWhiskeys;
-    // console.log('this is the added whiskey', res.locals.addWhiskey)
+     console.log('this is the added whiskey', req.body.whisky)
     return next()
   }
   catch (err){
