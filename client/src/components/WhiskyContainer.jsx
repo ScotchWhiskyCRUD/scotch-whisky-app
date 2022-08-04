@@ -11,10 +11,19 @@ const WhiskyContainer = () => {
   useEffect(() => {
     async function fetchWhiskies() {
       const response = await fetch('/api')
-      
+      // const newResponse = await fetch('https://evening-citadel-85778.herokuapp.com:443/whiskey/')
+      // const newNewResponse = await fetch ('https://evening-citadel-85778.herokuapp.com/whiskey/?page=2')
+      // const newNewData = await newNewResponse.json();
+      // console.log(newNewData)
+      // console.log(newResponse)
       const data = await response.json();
-      
-      setWhiskies(data.whiskeys); // changes our whiskies state from [] to data.whiskies (data.whiskies is an arr)
+      // const newData = await newResponse.json();
+      console.log(data)
+      const whiskeyArray = data.whiskeys;
+      console.log(whiskeyArray)
+      // console.log(newData);
+      setWhiskies(whiskeyArray);
+      // console.log(whiskeys) // changes our whiskies state from [] to data.whiskies (data.whiskies is an arr)
     }
     fetchWhiskies();
   }, [])
