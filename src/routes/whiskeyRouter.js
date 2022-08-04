@@ -7,7 +7,7 @@ const router = Router();
 //     console.log('using api route')
 // })
 
-router.get('/whiskeys', whiskeyController.getWhiskeys, (req, res) => {
+router.get('/', whiskeyController.getWhiskeys, (req, res) => {
     return res.status(200).json(res.locals.whiskeys)
 });
 
