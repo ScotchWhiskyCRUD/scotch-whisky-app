@@ -44,7 +44,6 @@ const WhiskyContainer = () => {
     );
   }
   
-
   return (
     <div>
       <h2>Whiskies</h2>
