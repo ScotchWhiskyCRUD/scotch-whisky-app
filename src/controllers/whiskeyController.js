@@ -35,6 +35,7 @@ whiskeyController.getWhiskeys = (req, res, next) => {
 
  };
 
+
  whiskeyController.addWhiskeys = async (req, res, next) => {
   try {
 
@@ -64,9 +65,22 @@ whiskeyController.getWhiskeys = (req, res, next) => {
   
  }
 
- whiskeyController.deleteWhiskeys = (req, res, next) => {
-  const deleteQuery = 'DELETE FROM scotches WHERE id `${}`'
- }
+ 
+// whiskeyController.deleteWhiskeys = (req, res, next) => {
+// const id = await req.params;
+//   console.log('MIDDLEWARE deletewhiskey');
+// const deleteQuery = `DELETE FROM scotches WHERE id = ${id};`
+// db.query(deleteQuery, req.params.id, )
+//   .then(data => {
+    
+//   })
+//   .catch(err => next ({
+//     log: 'whiskeyController.deleteWhiskeys',
+//     message: {err: 'Invalid delete'}
+//   }))
+// }
+
+
 
 
 module.exports = whiskeyController;
