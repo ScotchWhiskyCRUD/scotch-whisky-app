@@ -14,7 +14,7 @@ const WhiskyContainer = () => {
       
       const data = await response.json();
       
-      setWhiskies(data.whiskies); // changes our whiskies state from [] to data.whiskies (data.whiskies is an arr)
+      setWhiskies(data.whiskeys); // changes our whiskies state from [] to data.whiskies (data.whiskies is an arr)
     }
     fetchWhiskies();
   }, [])

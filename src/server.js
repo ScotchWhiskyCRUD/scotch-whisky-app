@@ -5,7 +5,7 @@ const path = require('path');
 const express = require('express');
 require('./DB/mongoose');
 
-// const cors = require('cors');
+const cors = require('cors');
 
 // invoking express library
 const app = express();
@@ -19,7 +19,7 @@ const port = 3000; // localhost
 
 
 //Cross-Origin Resource Sharing for API
-// app.use(cors());
+app.use(cors());
 
 // method in express to recognize incoming request as a json object
 app.use(express.json());

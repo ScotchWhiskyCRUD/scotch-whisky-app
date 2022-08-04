@@ -14,25 +14,25 @@
 
 // // module.exports = {getWhiskeys};
 
-// const db = require('../DB/whiskeyModel');
+const db = require('../DB/whiskeyModel');
 
-// // creating a whiskeyController object to add our methods
-// const whiskeyController = {};
+// creating a whiskeyController object to add our methods
+const whiskeyController = {};
 
-// // middleware to get whiskeys 
-// whiskeyController.getWhiskeys = (req, res, next) => {
-//   const getQuery = 'SELECT * FROM scotches'
+// middleware to get whiskeys 
+whiskeyController.getWhiskeys = (req, res, next) => {
+  const getQuery = 'SELECT * FROM scotches'
 
-//   db.query(getQuery)
-//    .then(data => {
-//     res.locals.whiskeys = data.rows;
-//     return next();
-//    })
-//    .catch(err => next({
-//     log: 'whiskeyController.getWhiskeys',
-//     message: {err: 'Invalid database query'}
-//    }))
+  db.query(getQuery)
+   .then(data => {
+    res.locals.whiskeys = data.rows;
+    return next();
+   })
+   .catch(err => next({
+    log: 'whiskeyController.getWhiskeys',
+    message: {err: 'Invalid database query'}
+   }))
 
-//  };
+ };
 
-// module.exports = whiskeyController;
+module.exports = whiskeyController;
