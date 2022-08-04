@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const WhiskyContainer = () => {
 
@@ -47,6 +48,7 @@ const WhiskyContainer = () => {
   return (
     <div>
       <h2>Whiskies</h2>
+      <Link to="/tastinglist">Tasting List</Link>
       <p>(Scroll down to see more)</p>
       <div>{whiskyDiv}</div>
       <br/>
