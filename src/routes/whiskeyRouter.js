@@ -11,6 +11,9 @@ router.get('/whiskeys', whiskeyController.getWhiskeys, (req, res) => {
     return res.status(200).json(res.locals.whiskeys)
 });
 
+// router.delete('/', whiskeyController.deleteWhiskey)
+
+
 
 
 

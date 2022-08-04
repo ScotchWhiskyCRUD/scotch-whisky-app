@@ -13,6 +13,7 @@ import Register from "./components/Register";
 import Settings from "./components/Settings";
 import WhiskyContainer from "./components/WhiskyContainer";
 import ErrorPage from "./components/ErrorPage";
+import TastingList from "./components/TastingList";
 import './App.css';
 
 
@@ -41,6 +42,8 @@ const App = () => {
           {/* <Route path="/tastinglist" element={<TastingList/>}>
           </Route> */}
           <Route path="/settings" element={<Settings/>}>
+          </Route> 
+          <Route path="/tastinglist" element={<TastingList/>}>
           </Route>
           <Route path="*" element={<ErrorPage/>}>
           </Route>
