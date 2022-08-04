@@ -11,35 +11,58 @@ const WhiskyContainer = () => {
   useEffect(() => {
     async function fetchWhiskies() {
       const response = await fetch('/api')
-      // const newResponse = await fetch('https://evening-citadel-85778.herokuapp.com:443/whiskey/')
-      // const newNewResponse = await fetch ('https://evening-citadel-85778.herokuapp.com/whiskey/?page=2')
-      // const newNewData = await newNewResponse.json();
-      // console.log(newNewData)
-      // console.log(newResponse)
+     
       const data = await response.json();
-      // const newData = await newResponse.json();
+     
       console.log(data)
       const whiskeyArray = data.whiskeys;
       console.log(whiskeyArray)
-      // console.log(newData);
+      
       setWhiskies(whiskeyArray);
-      // console.log(whiskeys) // changes our whiskies state from [] to data.whiskies (data.whiskies is an arr)
+      
     }
     fetchWhiskies();
   }, [])
   
   console.log('after fetch call', whiskies);
 
+
+  const handleClick = async (whisky) => {
+    console.log('this is the whisky',whisky)
+    console.log('button');
+    try {
+      const response = await fetch('/whiskeys/add', {
+        method: 'POST',
+        body: JSON.stringify({
+          whisky
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      });
+
+      const result = await response.json();
+
+      console.log('result is: ', JSON.stringify(whisky));
+    } catch (err) {
+      console.log('error in Add To List button');
+     }
+  };
+  
+  
+
+
   const whiskyDiv = [];
   for (let i = 0; i < whiskies.length; i += 1) {
     const whisky = whiskies[i];
     whiskyDiv.push(
-      <div>
+      <div key={i}>
         <hr/>
         <h3>{whisky.title}</h3>
         <h4><strong>Region</strong>: {whisky.region}</h4>
         <img src={whisky.list_img_url}/><br></br>
-        <button>Add To Tasting List</button>
+        <button onClick={()=>handleClick(whisky)}>Add To Tasting List</button>
       </div>
     );
   }

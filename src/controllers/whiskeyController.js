@@ -35,4 +35,23 @@ whiskeyController.getWhiskeys = (req, res, next) => {
 
  };
 
+ whiskeyController.addWhiskeys = async (req, res, next) => {
+  try {
+    console.log('WHISKEY CONTROLLER');
+    console.log('this is req.body ', req.body);
+    const addQuery = 'INSERT INTO scotches'
+    res.locals.stuff = await req.body;
+    return next()
+  }
+  catch (err){
+    console.log('error in controller');
+  }
+  
+ }
+
+ whiskeyController.deleteWhiskeys = (req, res, next) => {
+  const deleteQuery = 'DELETE FROM scotches WHERE id `${}`'
+ }
+
+
 module.exports = whiskeyController;
