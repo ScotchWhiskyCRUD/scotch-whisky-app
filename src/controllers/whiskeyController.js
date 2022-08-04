@@ -37,10 +37,25 @@ whiskeyController.getWhiskeys = (req, res, next) => {
 
  whiskeyController.addWhiskeys = async (req, res, next) => {
   try {
+
+    const {
+      id,
+      title,
+      img_url,
+      region,
+      price,
+      rating,
+      description,
+    } = req.body.whisky 
+    console.log('this is req.body.whisky.id', req.body.whisky.id)
     console.log('WHISKEY CONTROLLER');
-    console.log('this is req.body ', req.body);
-    const addQuery = 'INSERT INTO scotches'
-    res.locals.stuff = await req.body;
+    const values = [id, title, img_url, region, price, rating, description]
+    const addQuery = `INSERT INTO scotches(id,title,img_url,region,price,rating,description)
+                           VALUES ($1, $2, $3, $4, $5, $6, $7);` 
+    
+    const addWhiskeys = await db.query(addQuery, values)
+    res.locals.addWhiskey = addWhiskeys;
+    // console.log('this is the added whiskey', res.locals.addWhiskey)
     return next()
   }
   catch (err){

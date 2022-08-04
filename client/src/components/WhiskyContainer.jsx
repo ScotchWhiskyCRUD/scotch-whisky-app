@@ -44,7 +44,7 @@ const WhiskyContainer = () => {
 
       const result = await response.json();
 
-      console.log('result is: ', JSON.stringify(whisky));
+      console.log('result is: ', JSON.stringify(result));
     } catch (err) {
       console.log('error in Add To List button');
      }
