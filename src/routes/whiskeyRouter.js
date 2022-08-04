@@ -9,7 +9,9 @@ const router = Router();
 
 router.get('/whiskeys', whiskeyController.getWhiskeys, (req, res) => {
     return res.status(200).json(res.locals.whiskeys)
-
 });
+
+
+
 
 module.exports = router;

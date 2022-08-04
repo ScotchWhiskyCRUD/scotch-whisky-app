@@ -29,12 +29,12 @@ const WhiskyContainer = () => {
         <hr/>
         <h3>{whisky.title}</h3>
         <h4><strong>Region</strong>: {whisky.region}</h4>
-        <img src={whisky.list_img_url}/>
+        <img src={whisky.list_img_url}/><br></br>
+        <button>Add To Tasting List</button>
       </div>
     );
   }
   
-
   return (
     <div>
       <h2>Whiskies</h2>
